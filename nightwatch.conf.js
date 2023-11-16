@@ -32,13 +32,7 @@ module.exports = {
   // See https://nightwatchjs.org/guide/concepts/test-globals.html#external-test-globals
   globals_path : '',
 
-  webdriver: {
-    start_process: true,
-    server_path: 'https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip', // Adjust the URL based on the GeckoDriver version and your OS
-    cli_args: [
-      // additional command-line arguments if needed
-    ],
-  },
+  webdriver: {},
   
   test_workers: {
     enabled: true,
@@ -62,7 +56,10 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: ''
+        server_path: 'https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip', // GeckoDriver for Firefox
+        cli_args: [
+          // additional command-line arguments if needed
+        ],
       }
     },
 
@@ -81,7 +78,7 @@ module.exports = {
       },
       webdriver: {
         start_process: true,
-        server_path: '',
+        server_path: 'https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip', // GeckoDriver for Firefox
         cli_args: [
           // very verbose geckodriver logs
           // '-vv'
@@ -108,7 +105,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: '',
+        server_path: 'https://chromedriver.storage.googleapis.com/99.0.4844.51/chromedriver_win32.zip', // ChromeDriver for Chrome
         cli_args: [
           // --verbose
         ]
@@ -131,7 +128,7 @@ module.exports = {
         start_process: true,
         // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
         //  and set the location below:
-        server_path: '',
+        server_path: 'https://msedgedriver.azureedge.net/99.0.1150.37/edgedriver_win64.zip', // EdgeDriver for Microsoft Edge
         cli_args: [
           // --verbose
         ]
