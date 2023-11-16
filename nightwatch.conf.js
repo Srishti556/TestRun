@@ -56,7 +56,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: 'https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip', // GeckoDriver for Firefox
+        server_path: './geckodriver.exe', // GeckoDriver for Firefox
         port: undefined,
         host: 'localhost',
         ssl: false,
@@ -83,7 +83,7 @@ module.exports = {
       },
       webdriver: {
         start_process: true,
-        server_path: 'https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip', // GeckoDriver for Firefox
+        server_path: './geckodriver.exe'
         port: undefined,
         host: 'localhost',
         ssl: false,
