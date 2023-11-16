@@ -57,6 +57,11 @@ module.exports = {
       webdriver: {
         start_process: true,
         server_path: 'https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip', // GeckoDriver for Firefox
+        port: undefined,
+        host: 'localhost',
+        ssl: false,
+        default_path_prefix: '',
+        proxy: undefined,
         cli_args: [
           // additional command-line arguments if needed
         ],
@@ -79,6 +84,11 @@ module.exports = {
       webdriver: {
         start_process: true,
         server_path: 'https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip', // GeckoDriver for Firefox
+        port: undefined,
+        host: 'localhost',
+        ssl: false,
+        default_path_prefix: '',
+        proxy: undefined,
         cli_args: [
           // very verbose geckodriver logs
           // '-vv'
