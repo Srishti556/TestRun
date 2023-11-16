@@ -32,7 +32,13 @@ module.exports = {
   // See https://nightwatchjs.org/guide/concepts/test-globals.html#external-test-globals
   globals_path : '',
 
-  webdriver: {},
+  webdriver: {
+    start_process: true,
+    server_path: 'https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-win64.zip', // Adjust the URL based on the GeckoDriver version and your OS
+    cli_args: [
+      // additional command-line arguments if needed
+    ],
+  },
   
   test_workers: {
     enabled: true,
