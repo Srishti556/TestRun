@@ -62,6 +62,7 @@ module.exports = {
         start_process: true,
         server_path: require('chromedriver').path,
         port: 9515,
+        log_path: './logs/chromeDriver.log',
       }
     },
 
@@ -87,6 +88,7 @@ module.exports = {
         start_process: true,
         server_path: require('chromedriver').path,
         port: 9515,
+        log_path: './logs/chromeDriver.log',
       }
     },
 
