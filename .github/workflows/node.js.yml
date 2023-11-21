@@ -24,7 +24,13 @@ jobs:
     - run: npm ci
     - run: mkdir -p screens logs
     - run: sudo apt-get install xvfb
-    - run: npm install chromedriver --save-dev
+    - name: Download ChromeDriver
+      run: |
+          CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
+          curl -O "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+          unzip chromedriver_linux64.zip
+          chmod +x chromedriver
+          mv chromedriver ./node_modules/.bin/
     - name: Run Nightwatch tests
       run: npm test
       
