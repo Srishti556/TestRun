@@ -52,48 +52,35 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName : 'chrome'
+        browserName : 'firefox'
       },
 
       webdriver: {
-         start_process: true,
-         server_path: './node_modules/.bin/chromedriver',
-         port: 9515,
-         host: 'localhost',
-         ssl: false,
-         default_path_prefix: '',
-         proxy: undefined,
-         cli_args: {},
-         log_path: './logs',
-    }
+        start_process: true,
+        server_path: ''
+      }
     },
 
-    chrome: {
+    firefox: {
       desiredCapabilities : {
-        browserName : 'chrome',
-          'goog:chromeOptions' : {
-          // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
-          //
-          // w3c:false tells Chromedriver to run using the legacy JSONWire protocol (not required in Chrome 78)
-          w3c: true,
+        browserName : 'firefox',
+        acceptInsecureCerts: true,
+        'moz:firefoxOptions': {
           args: [
-            //'--no-sandbox',
-            //'--ignore-certificate-errors',
-            //'--allow-insecure-localhost',
-            //'--headless'
+            // '-headless',
+            // '-verbose'
           ]
         }
       },
-
-      webdriver: 
-        {
+      webdriver: {
         start_process: true,
-        server_path: './node_modules/.bin/chromedriver',
-        port: 9515,
-        log_path: './logs'
-    }
-      
-  },
+        server_path: '',
+        cli_args: [
+          // very verbose geckodriver logs
+          // '-vv'
+        ]
+      }
+    },
 
   
     //////////////////////////////////////////////////////////////////////////////////
