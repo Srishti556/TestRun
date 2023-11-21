@@ -31,6 +31,8 @@ jobs:
           unzip msedgedriver_linux64.zip
           chmod +x msedgedriver
           mv msedgedriver ./node_modules/.bin/
+          chmod +x ./node_modules/.bin/msedgedriver
+
     - name: Run Nightwatch tests
       run: npm test
       
