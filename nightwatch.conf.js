@@ -32,16 +32,7 @@ module.exports = {
   // See https://nightwatchjs.org/guide/concepts/test-globals.html#external-test-globals
   globals_path : '',
 
-  webdriver: {
-     start_process: true,
-     server_path: './node_modules/.bin/chromedriver',
-     port: 9515,
-     host: 'localhost',
-     ssl: false,
-     default_path_prefix: '',
-     proxy: undefined,
-     cli_args: {},
-     log_path: './logs',
+  webdriver: { 
   },
   
   test_workers: {
@@ -65,31 +56,23 @@ module.exports = {
       },
 
       webdriver: {
-        start_process: true,
-     server_path: './node_modules/.bin/chromedriver',
-     port: 9515,
-     host: 'localhost',
-     ssl: false,
-     default_path_prefix: '',
-     proxy: undefined,
-     cli_args: {},
-        log_path: './logs',
+         start_process: true,
+         server_path: './node_modules/.bin/chromedriver',
+         port: 9515,
+         host: 'localhost',
+         ssl: false,
+         default_path_prefix: '',
+         proxy: undefined,
+         cli_args: {},
+         log_path: './logs',
       }
     },
 
     chrome: {
       desiredCapabilities : {
         browserName : 'chrome',
-        'goog:chromeOptions' : {
-          // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
-          //
-          // w3c:false tells Chromedriver to run using the legacy JSONWire protocol (not required in Chrome 78)
           w3c: true,
-          args: [
-            //'--no-sandbox',
-            //'--ignore-certificate-errors',
-            //'--allow-insecure-localhost',
-            //'--headless'
+          args: [        
           ]
         }
       },
