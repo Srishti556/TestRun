@@ -32,7 +32,11 @@ jobs:
           chmod +x msedgedriver
           mv msedgedriver ./node_modules/.bin/
           chmod +x ./node_modules/.bin/msedgedriver
+    - name: List Files in Directory
+      run: ls -l ./node_modules/.bin/
 
+    - name: Debug
+      run: echo $PWD
     - name: Run Nightwatch tests
       run: npm test
       
