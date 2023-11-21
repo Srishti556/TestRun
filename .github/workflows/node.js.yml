@@ -24,13 +24,13 @@ jobs:
     - run: npm ci
     - run: mkdir -p screens logs
     - run: sudo apt-get install xvfb
-    - name: Download ChromeDriver
+    - name: Download EdgeDriver
       run: |
-          CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
-          curl -O "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
-          unzip chromedriver_linux64.zip
-          chmod +x chromedriver
-          mv chromedriver ./node_modules/.bin/
+          EDGEDRIVER_VERSION=$(curl -sS https://msedgedriver.azureedge.net/LATEST_STABLE)
+          curl -O "https://msedgedriver.azureedge.net/${EDGEDRIVER_VERSION}/msedgedriver_linux64.zip"
+          unzip msedgedriver_linux64.zip
+          chmod +x msedgedriver
+          mv msedgedriver ./node_modules/.bin/
     - name: Run Nightwatch tests
       run: npm test
       
