@@ -52,32 +52,39 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName : 'firefox'
+        browserName : 'MicrosoftEdge'
       },
 
       webdriver: {
         start_process: true,
-        server_path: ''
+        // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
+        //  and set the location below:
+        server_path: './node_modules/.bin/msedgedriver',
+        cli_args: [
+          // --verbose
+        ]
       }
     },
 
-    firefox: {
+    edge: {
       desiredCapabilities : {
-        browserName : 'firefox',
-        acceptInsecureCerts: true,
-        'moz:firefoxOptions': {
+        browserName : 'MicrosoftEdge',
+        'ms:edgeOptions' : {
+          w3c: true,
+          // More info on EdgeDriver: https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/capabilities-edge-options
           args: [
-            // '-headless',
-            // '-verbose'
+            //'--headless'
           ]
         }
       },
+
       webdriver: {
         start_process: true,
-        server_path: '',
+        // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
+        //  and set the location below:
+        server_path: './node_modules/.bin/msedgedriver',
         cli_args: [
-          // very verbose geckodriver logs
-          // '-vv'
+          // --verbose
         ]
       }
     },
