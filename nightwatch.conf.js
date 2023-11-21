@@ -33,9 +33,15 @@ module.exports = {
   globals_path : '',
 
   webdriver: {
-    start_process: true,
-    server_path: require('chromedriver').path,
-    port: 9515,
+     start_process: true,
+     server_path: './node_modules/.bin/chromedriver',
+     port: 9515,
+     host: 'localhost',
+     ssl: false,
+     default_path_prefix: '',
+     proxy: undefined,
+     cli_args: {},
+     log_path: './logs',
   },
   
   test_workers: {
@@ -60,8 +66,13 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: './node_modules/.bin/chromedriver',
-        port: 9515,
+     server_path: './node_modules/.bin/chromedriver',
+     port: 9515,
+     host: 'localhost',
+     ssl: false,
+     default_path_prefix: '',
+     proxy: undefined,
+     cli_args: {},
         log_path: './logs',
       }
     },
