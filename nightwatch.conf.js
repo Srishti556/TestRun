@@ -60,7 +60,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: './geckodriver.exe', // GeckoDriver for Firefox
+        server_path: require('chromedriver').path,
         port: undefined,
         host: 'localhost',
         ssl: false,
@@ -69,34 +69,6 @@ module.exports = {
         cli_args: [
           // additional command-line arguments if needed
         ],
-      }
-    },
-
-    
-
-    firefox: {
-      desiredCapabilities : {
-        browserName : 'firefox',
-        acceptInsecureCerts: true,
-        'moz:firefoxOptions': {
-          args: [
-            // '-headless',
-            // '-verbose'
-          ]
-        }
-      },
-      webdriver: {
-        start_process: true,
-        server_path: './geckodriver.exe',
-        port: undefined,
-        host: 'localhost',
-        ssl: false,
-        default_path_prefix: '',
-        proxy: undefined,
-        cli_args: [
-          // very verbose geckodriver logs
-          // '-vv'
-        ]
       }
     },
 
@@ -119,15 +91,15 @@ module.exports = {
 
       webdriver: 
         {
-     start_process: true,
-     server_path: require('chromedriver').path,
-     port: undefined,
-     host: 'localhost',
-     ssl: false,
-     default_path_prefix: '',
-     proxy: undefined,
-     cli_args: []
-  }
+         start_process: true,
+         server_path: require('chromedriver').path,
+         port: undefined,
+         host: 'localhost',
+         ssl: false,
+         default_path_prefix: '',
+         proxy: undefined,
+         cli_args: []
+      }
     },
 
   
