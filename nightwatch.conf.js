@@ -61,14 +61,7 @@ module.exports = {
       webdriver: {
         start_process: true,
         server_path: require('chromedriver').path,
-        port: undefined,
-        host: 'localhost',
-        ssl: false,
-        default_path_prefix: '',
-        proxy: undefined,
-        cli_args: [
-          // additional command-line arguments if needed
-        ],
+        port: 9515,
       }
     },
 
@@ -91,14 +84,9 @@ module.exports = {
 
       webdriver: 
         {
-         start_process: true,
-         server_path: require('chromedriver').path,
-         port: undefined,
-         host: 'localhost',
-         ssl: false,
-         default_path_prefix: '',
-         proxy: undefined,
-         cli_args: []
+        start_process: true,
+        server_path: require('chromedriver').path,
+        port: 9515,
       }
     },
 
