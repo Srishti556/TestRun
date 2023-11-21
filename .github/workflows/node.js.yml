@@ -28,6 +28,7 @@ jobs:
       run: |
           EDGEDRIVER_VERSION=$(curl -sS https://msedgedriver.azureedge.net/LATEST_STABLE)
           curl -O "https://msedgedriver.azureedge.net/${EDGEDRIVER_VERSION}/msedgedriver_linux64.zip"
+
           unzip msedgedriver_linux64.zip
           chmod +x msedgedriver
           mv msedgedriver ./node_modules/.bin/
