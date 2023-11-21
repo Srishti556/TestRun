@@ -113,13 +113,17 @@ module.exports = {
         }
       },
 
-      webdriver: {
-        start_process: true,
-        server_path: 'https://chromedriver.storage.googleapis.com/99.0.4844.51/chromedriver_win32.zip', // ChromeDriver for Chrome
-        cli_args: [
-          // --verbose
-        ]
-      }
+      webdriver: 
+        {
+     start_process: true,
+     server_path: 'https://chromedriver.storage.googleapis.com/99.0.4844.51/chromedriver_win32.zip',
+     port: undefined,
+     host: 'localhost',
+     ssl: false,
+     default_path_prefix: '',
+     proxy: undefined,
+     cli_args: []
+  }
     },
 
     edge: {
