@@ -120,7 +120,7 @@ module.exports = {
       webdriver: 
         {
      start_process: true,
-     server_path: 'https://chromedriver.storage.googleapis.com/99.0.4844.51/chromedriver_win32.zip',
+     server_path: require('chromedriver').path,
      port: undefined,
      host: 'localhost',
      ssl: false,
@@ -130,29 +130,7 @@ module.exports = {
   }
     },
 
-    edge: {
-      desiredCapabilities : {
-        browserName : 'MicrosoftEdge',
-        'ms:edgeOptions' : {
-          w3c: true,
-          // More info on EdgeDriver: https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/capabilities-edge-options
-          args: [
-            //'--headless'
-          ]
-        }
-      },
-
-      webdriver: {
-        start_process: true,
-        // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
-        //  and set the location below:
-        server_path: 'https://msedgedriver.azureedge.net/99.0.1150.37/edgedriver_win64.zip', // EdgeDriver for Microsoft Edge
-        cli_args: [
-          // --verbose
-        ]
-      }
-    },
-
+  
     //////////////////////////////////////////////////////////////////////////////////
     // Configuration for when using cucumber-js (https://cucumber.io)                |
     //                                                                               |
