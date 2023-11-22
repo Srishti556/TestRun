@@ -60,7 +60,7 @@ module.exports = {
         // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
         //  and set the location below:
         server_path: '/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe',
-        port: undefined,
+        port: 9515,
         host: 'localhost',
         ssl: false,
         default_path_prefix: '',
@@ -88,7 +88,7 @@ module.exports = {
         // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
         //  and set the location below:
         server_path: '/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe',
-        port: undefined,
+        port: 9515,
         host: 'localhost',
         ssl: false,
         default_path_prefix: '',
