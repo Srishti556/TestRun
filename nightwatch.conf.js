@@ -33,6 +33,7 @@ module.exports = {
   globals_path : '',
 
   webdriver: { 
+      logEntries: true,
   },
   
   test_workers: {
@@ -68,7 +69,7 @@ module.exports = {
         cli_args: [
           // --verbose
         ],
-        logEntries: true,
+  
       }
     },
 
@@ -97,7 +98,7 @@ module.exports = {
         cli_args: [
           // --verbose
         ],
-        logEntries: true,
+
       }
     },
 
