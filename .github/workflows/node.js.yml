@@ -31,7 +31,7 @@ jobs:
           file msedgedriver_linux64.zip
           7z x msedgedriver_linux64.zip
           sudo apt-get install p7zip-full
-          unzip -a msedgedriver_linux64.zip
+          unzip -a msedgedriver_linux64.zip -y
           chmod +x msedgedriver
           mv msedgedriver ./node_modules/.bin/
           chmod +x ./node_modules/.bin/msedgedriver
