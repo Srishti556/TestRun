@@ -59,7 +59,7 @@ module.exports = {
         start_process: true,
         // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
         //  and set the location below:
-        server_path: require('path').resolve('./node_modules/.bin/msedgedriver.exe'),
+        server_path: '/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe',
         cli_args: [
           // --verbose
         ]
@@ -82,7 +82,7 @@ module.exports = {
         start_process: true,
         // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
         //  and set the location below:
-        server_path: require('path').resolve('./node_modules/.bin/msedgedriver.exe'),
+        server_path: '/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe',
         cli_args: [
           // --verbose
         ]
