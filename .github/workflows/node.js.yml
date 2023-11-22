@@ -42,7 +42,10 @@ jobs:
     - name: Debug
       run: echo $PWD
     - name: Run Nightwatch tests
-      run: npm test
+      run: |
+         ls /home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe
+         chmod +x ./node_modules/.bin/msedgedriver.exe
+         npm test
       
     - name: "Publish test results"
       if: always()
