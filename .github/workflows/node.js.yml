@@ -35,7 +35,7 @@ jobs:
           ls -l
           chmod +x msedgedriver.exe
           mv msedgedriver.exe ./node_modules/.bin/
-          chmod +x ./node_modules/.bin/msedgedriver
+          chmod +x ./node_modules/.bin/msedgedriver.exe
     - name: List Files in Directory
       run: ls -l ./node_modules/.bin/
 
