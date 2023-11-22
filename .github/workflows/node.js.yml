@@ -28,7 +28,7 @@ jobs:
       run: |
           curl -O "https://msedgedriver.azureedge.net/latest-stable/msedgedriver_linux64.zip"
 
-          unzip msedgedriver_linux64.zip
+          unzip msedgedriver_linux64
           chmod +x msedgedriver
           mv msedgedriver ./node_modules/.bin/
           chmod +x ./node_modules/.bin/msedgedriver
