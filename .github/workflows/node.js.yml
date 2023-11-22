@@ -44,7 +44,7 @@ jobs:
     - name: Run Nightwatch tests
       run: |
          ls /home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe
-         chmod +x ./node_modules/.bin/msedgedriver.exe
+         chmod +x /home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe
          npm test
       
     - name: "Publish test results"
