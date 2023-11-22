@@ -67,7 +67,8 @@ module.exports = {
         proxy: undefined,
         cli_args: [
           // --verbose
-        ]
+        ],
+        logEntries: true,
       }
     },
 
@@ -95,7 +96,8 @@ module.exports = {
         proxy: undefined,
         cli_args: [
           // --verbose
-        ]
+        ],
+        logEntries: true,
       }
     },
 
