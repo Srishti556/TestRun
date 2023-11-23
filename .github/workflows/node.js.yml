@@ -36,12 +36,10 @@ jobs:
           ls -l
           mv msedgedriver.exe ./node_modules/.bin/
           chmod +x ./node_modules/.bin/msedgedriver.exe
-          ls -l ./node_modules/.bin/msedgedriver.exe
     - name: Run Nightwatch tests
-      run: |             
+      run: |  
+         ls ./node_modules/.bin/msedgedriver.exe 
          npm test
-         npx nightwatch --init
-      
     - name: "Publish test results"
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
