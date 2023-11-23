@@ -23,6 +23,8 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: mkdir -p screens logs
+    - run: npm install nightwatch@latest
+    - run: npm nightwatch --init
     - run: sudo apt-get install xvfb
     - name: Download EdgeDriver
       run: |
