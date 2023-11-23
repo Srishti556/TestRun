@@ -58,7 +58,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: "/home/runner/work/example_nightWatch/example_nightWatch/msedgedriver.exe",
+        server_path: "/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe",
         port: 9515,
         host: 'localhost',
         cli_args: [
@@ -78,7 +78,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: "/home/runner/work/example_nightWatch/example_nightWatch/msedgedriver.exe",
+        server_path: "/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe",
         port: 9515,
         host: 'localhost',
         logEntries: true,
