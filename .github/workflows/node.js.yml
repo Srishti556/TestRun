@@ -43,7 +43,6 @@ jobs:
     - name: Debug
       run: |
           echo $PWD
-          cd ..
     - name: Run Nightwatch tests
       run: |
          ls /home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe
