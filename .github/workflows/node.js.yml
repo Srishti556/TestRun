@@ -34,11 +34,9 @@ jobs:
           unzip -o msedgedriver_linux64.zip
           echo $PWD
           ls -l
-          chmod +x msedgedriver.exe
-          mv msedgedriver.exe /home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/
-          chmod +x /home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe
-    - name: List Files in Directory
-      run: ls -l ./node_modules/.bin/
+          mv msedgedriver.exe ./node_modules/.bin/
+          chmod +x ./node_modules/.bin/msedgedriver.exe
+          ls -l ./node_modules/.bin/
     - name: Run Nightwatch tests
       run: |             
          npm test
