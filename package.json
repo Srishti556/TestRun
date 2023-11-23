@@ -1,21 +1,30 @@
 {
-  "name": "apptesting",
-  "version": "1.0.0",
-  "description": "[![npm](https://img.shields.io/npm/v/nightwatch.svg)](https://www.npmjs.com/package/nightwatch)\r [![Node.js CI](https://github.com/nightwatchjs/nightwatch-examples/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/nightwatchjs/nightwatch-examples/actions/workflows/node.js.yml)\r [![Discord][discord-badge]][discord]",
+  "name": "nightwatch-examples",
+  "version": "0.1.0",
+  "description": "A Nightwatch 2 boilerplate project which runs the bundled examples in Github Actions against Google Chrome",
   "main": "index.js",
   "scripts": {
     "test": "nightwatch"
   },
-  "author": "",
-  "license": "ISC",
-  "directories": {
-    "lib": "lib",
-    "test": "tests"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightwatchjs/nightwatch-examples.git"
   },
+  "keywords": [
+    "nightwatch",
+    "nightwatchjs",
+    "selenium-webdriver",
+    "chrome-headless"
+  ],
+  "author": "Andrei Rusu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nightwatchjs/nightwatch-examples/issues"
+  },
+  "homepage": "https://github.com/nightwatchjs/nightwatch-examples#readme",
   "dependencies": {
-    "node-fetch": "^3.3.2"
-  },
-  "devDependencies": {
-    "nightwatch": "^3.3.2"
+    "@cucumber/cucumber": "^8.2.1",
+    "chromedriver": "^103.0.0",
+    "nightwatch": "^2.2.2"
   }
 }
