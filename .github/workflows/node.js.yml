@@ -37,7 +37,7 @@ jobs:
           
     - name: Run Nightwatch tests
       run: |  
-         ls -l ./node_modules/.bin/msedgedriver
+         ls -l ./node_modules/.bin/msedgedriver.exe
          npm test
     - name: "Publish test results"
       if: always()
