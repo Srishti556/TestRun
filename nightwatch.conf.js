@@ -58,18 +58,12 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
-        //  and set the location below:
         server_path: '/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver',
         port: 9515,
         host: 'localhost',
-        ssl: false,
-        default_path_prefix: '',
-        proxy: undefined,
         cli_args: [
-          // --verbose
         ],
-        logEntries: true
+        logEntries: true,
       }
     },
 
@@ -78,55 +72,18 @@ module.exports = {
         browserName : 'MicrosoftEdge',
         'ms:edgeOptions' : {
           w3c: true,
-          // More info on EdgeDriver: https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/capabilities-edge-options
-          args: [
-            //'--headless'
-          ]
+          args: []
         }
       },
 
       webdriver: {
         start_process: true,
-        // Download msedgedriver from https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium/
-        //  and set the location below:
-        server_path: '/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver',
+        server_path: '/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/msedgedriver.exe',
         port: 9515,
         host: 'localhost',
-        ssl: false,
-        default_path_prefix: '',
-        proxy: undefined,
-        cli_args: [
-          // --verbose
-        ],
-        logEntries: true
+        logEntries: true,
       }
     },
-     chrome: {
-      desiredCapabilities : {
-        browserName : 'chrome',
-          'goog:chromeOptions' : {
-          // More info on Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
-          //
-          // w3c:false tells Chromedriver to run using the legacy JSONWire protocol (not required in Chrome 78)
-          w3c: true,
-          args: [
-            //'--no-sandbox',
-            //'--ignore-certificate-errors',
-            //'--allow-insecure-localhost',
-            //'--headless'
-          ],
-          
-        }
-      },
-
-      webdriver: 
-        {
-        start_process: true,
-        server_path: '/home/runner/work/example_nightWatch/example_nightWatch/node_modules/.bin/chromedriver',
-        port: 9515,
-        logEntries: true
-    }
-  },
 
 
   
