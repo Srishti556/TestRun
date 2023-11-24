@@ -32,7 +32,7 @@ jobs:
           chmod +x ./node_modules/.bin/msedgedriver.exe
     - name: Download Microsoft Edge MSI
       run: |
-        Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=2093437' -OutFile 'msedge.msi'
+        curl -o msedge.msi -L https://go.microsoft.com/fwlink/?LinkID=2093437
 
     - name: Install Microsoft Edge
       run: |
