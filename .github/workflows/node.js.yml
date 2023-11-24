@@ -30,12 +30,26 @@ jobs:
           unzip -o msedgedriver_linux64.zip        
           mv msedgedriver.exe ./node_modules/.bin/   
           chmod +x ./node_modules/.bin/msedgedriver.exe
+    - name: Install Edge if not installed
+      run: |
+        if ! command -v msedge &> /dev/null; then
+          echo "Edge is not installed. Installing..."
+          wget -q https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/msedge-dev_98.0.1043.1-1_amd64.deb -O msedge-dev.deb
+          sudo dpkg -i msedge-dev.deb
+          sudo apt-get install -f
+        else
+          echo "Edge is already installed"
+        fi
+
+    - name: Display Edge Installation Location
+      run: |
+        echo "Edge is installed at: $(command -v msedge)"
+        echo "Edge version: $(msedge --version)"
     - name: Run Nightwatch tests
       run: |  
          ls -l ./node_modules/.bin/msedgedriver.exe
          npm list nightwatch
          echo $PWD
-         echo "Edge version: $(msedge --version)"
          npm test
     - name: "Publish test results"
       if: always()
