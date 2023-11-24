@@ -32,7 +32,9 @@ jobs:
           chmod +x ./node_modules/.bin/msedgedriver.exe
     - name: Install Edge if not installed
       run: |
-          wget -q https://go.microsoft.com/fwlink/?linkid=2109047&Channel=Stable&language=en-gb&brand=M100 -O msedge-dev.deb
+          wget -qO msedge-dev.deb https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-dev/msedge-dev_98.0.1043.1-1_amd64.deb
+
+          # Install Microsoft Edge
           sudo dpkg -i msedge-dev.deb
           sudo apt-get install -f
     - name: Display Edge Installation Location
