@@ -35,10 +35,12 @@ jobs:
         curl -o msedge.msi -L https://go.microsoft.com/fwlink/?LinkID=2093437
 
     - name: Install Microsoft Edge
+      
       run: |
-        msiexec.exe /i msedge.msi /quiet /norestart
+        Start-Process msiexec.exe -Wait -ArgumentList "/i msedge.msi /quiet /norestart"
 
     - name: Display Edge Version
+      
       run: |
         Get-Command msedge
         msedge --version
