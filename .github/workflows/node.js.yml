@@ -36,7 +36,7 @@ jobs:
 
     - name: Install Microsoft Edge
       run: |
-        Start-Process msiexec.exe -Wait -ArgumentList "/i msedge.msi /quiet /norestart"
+        msiexec.exe /i msedge.msi /quiet /norestart
 
     - name: Display Edge Version
       run: |
