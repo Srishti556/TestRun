@@ -30,17 +30,18 @@ jobs:
           unzip -o msedgedriver_linux64.zip        
           mv msedgedriver.exe ./node_modules/.bin/   
           chmod +x ./node_modules/.bin/msedgedriver.exe
-    - name: Install Edge if not installed
+    - name: Download Microsoft Edge MSI
       run: |
-          wget -qO msedge-dev.deb https://go.microsoft.com/fwlink/?linkid=2109047&Channel=Stable&language=en-gb&brand=M100
+        Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=2093437' -OutFile 'msedge.msi'
 
-          # Install Microsoft Edge
-          sudo dpkg -i msedge-dev.deb
-          sudo apt-get install -f
-    - name: Display Edge Installation Location
+    - name: Install Microsoft Edge
       run: |
-        echo "Edge is installed at: $(command -v msedge)"
-        echo "Edge version: $(msedge --version)"
+        Start-Process msiexec.exe -Wait -ArgumentList "/i msedge.msi /quiet /norestart"
+
+    - name: Display Edge Version
+      run: |
+        Get-Command msedge
+        msedge --version
     - name: Run Nightwatch tests
       run: |  
          ls -l ./node_modules/.bin/msedgedriver.exe
