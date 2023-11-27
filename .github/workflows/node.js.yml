@@ -33,7 +33,7 @@ jobs:
     - name: Get Edge Version
       id: get_edge_version
       run: |
-        EDGE_VERSION=$(node -e "console.log(require('os').userInfo().username)")
+        EDGE_VERSION=$(node -e "console.log(require('puppeteer-core/package.json').version)")
         echo "EDGE_VERSION=$EDGE_VERSION" >> $GITHUB_ENV
 
     - name: Display Edge Version
