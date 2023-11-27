@@ -46,7 +46,7 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with: 
-        github_token: ${{ GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: './tests_output/nightwatch-html-report'
         keep_files: true
       
