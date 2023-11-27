@@ -23,6 +23,23 @@ jobs:
     - run: mkdir -p screens logs
     - run: npm install nightwatch@latest
     - run: sudo apt-get install xvfb
+    - name: Display Browser Information
+      run: |
+        echo "Operating System: $(uname -s)"
+        echo "GitHub Runner OS: ${{ runner.os }}"
+        echo "GitHub Runner Label: ${{ runner.label }}"
+        echo "Browser Version: $BROWSER_VERSION"
+
+    - name: Set Browser Version
+      run: |
+        if [ "${{ runner.os }}" == "Windows" ]; then
+          BROWSER_VERSION=$(Get-Item "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe").VersionInfo.FileVersion
+        elif [ "${{ runner.os }}" == "Linux" ]; then
+          BROWSER_VERSION=$(edge --version)
+        else
+          BROWSER_VERSION=$(mdls -name kMDItemVersion /Applications/Microsoft\ Edge.app | awk '{print $NF}')
+        fi
+        echo "BROWSER_VERSION=$BROWSER_VERSION" >> $GITHUB_ENV
     - name: Download EdgeDriver
       run: |
           curl -L -o msedgedriver_linux64.zip "https://msedgedriver.azureedge.net/119.0.2151.72/edgedriver_win64.zip"
