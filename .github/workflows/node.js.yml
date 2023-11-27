@@ -42,7 +42,7 @@ jobs:
         echo "BROWSER_VERSION=$BROWSER_VERSION" >> $GITHUB_ENV
     - name: Download EdgeDriver
       run: |
-          curl -L -o msedgedriver_linux64.zip "https://msedgedriver.azureedge.net/119.0.2151.72/edgedriver_win64.zip"
+          curl -L -o msedgedriver_linux64.zip "https://msedgedriver.azureedge.net/119.0.2151.72/edgedriver_linux64.zip"
           7z x msedgedriver_linux64.zip           
           unzip -o msedgedriver_linux64.zip        
           mv msedgedriver.exe ./node_modules/.bin/   
