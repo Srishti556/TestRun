@@ -31,8 +31,12 @@ jobs:
           mv msedgedriver.exe ./node_modules/.bin/   
           chmod +x ./node_modules/.bin/msedgedriver.exe
     - name: Get Edge Version
+      id: get_edge_version
       run: |
-        echo "::set-output name=edge_version::$(node -e "console.log(require('os').userInfo().username)")"
+        echo "EDGE_VERSION=$(node -e \"console.log(require('os').userInfo().username)\")" >> $GITHUB_ENV
+
+    - name: Display Edge Version
+      run: |
         echo "Edge Version is $EDGE_VERSION"
     - name: Run Nightwatch tests
       run: |  
