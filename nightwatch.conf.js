@@ -44,37 +44,18 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: 'https://nightwatchjs.org',
-
+      launch_url: 'https://localhost',
       screenshots: {
         enabled: false,
         path: 'screens',
         on_failure: true
       },
-
       desiredCapabilities: {
         browserName: 'MicrosoftEdge',
        'ms:edgeOptions': {
           args: ['--verbose']
       }
       },
-
-      webdriver: {
-        start_process: true,
-        server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
-        port: 9515,
-        host: 'localhost',
-      }
-    },
-
-    edge: {
-      desiredCapabilities : {
-        browserName : 'MicrosoftEdge',
-        'ms:edgeOptions': {
-          args: ['--verbose']
-      }
-      },
-
       webdriver: {
         start_process: true,
         server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
