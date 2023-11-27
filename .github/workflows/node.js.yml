@@ -28,12 +28,11 @@ jobs:
           curl -L -o msedgedriver_linux64.zip "https://msedgedriver.azureedge.net/119.0.2151.72/edgedriver_linux64.zip"
           7z x msedgedriver_linux64.zip           
           unzip -o msedgedriver_linux64.zip        
-          mv msedgedriver.exe ./node_modules/.bin/   
-          chmod +x ./node_modules/.bin/msedgedriver.exe
+          mv msedgedriver_linux64.zip ./node_modules/.bin/   
+          chmod +x ./node_modules/.bin/msedgedriver_linux64.zip
     - name: Run Nightwatch tests
       run: |  
-         ls -l ./node_modules/.bin/msedgedriver.exe
-         npm list nightwatch
+         ls -l ./node_modules/.bin/msedgedriver_linux64.zip
          echo $PWD
          npm test
     - name: "Publish test results"
