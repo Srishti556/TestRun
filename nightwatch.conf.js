@@ -53,7 +53,7 @@ module.exports = {
       },
 
       desiredCapabilities: {
-        browserName: 'edge',
+        browserName: 'MicrosoftEdge',
        'ms:edgeOptions': {
           args: ['--verbose']
       }
@@ -69,7 +69,7 @@ module.exports = {
 
     edge: {
       desiredCapabilities : {
-        browserName : 'edge',
+        browserName : 'MicrosoftEdge',
         'ms:edgeOptions': {
           args: ['--verbose']
       }
