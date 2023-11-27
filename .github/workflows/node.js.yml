@@ -22,14 +22,16 @@ jobs:
     - run: npm install
     - run: mkdir -p screens logs
     - run: sudo apt-get install xvfb
+    - uses: browser-actions/setup-edge@v1
+    - name: Print Edge version
+      run: (Get-Item (Get-Command msedge).Source).VersionInfo.ProductVersion
     - name: Download EdgeDriver
       run: |
-          msedge --version
-          curl -L -o msedgedriver_linux64.zip "https://msedgedriver.azureedge.net/119.0.2151.72/edgedriver_linux64.zip"
-          7z x msedgedriver_linux64.zip           
-          unzip -o msedgedriver_linux64.zip        
-          mv msedgedriver ./node_modules/.bin/   
-          chmod +x ./node_modules/.bin/msedgedriver
+          curl -L -o msedgedriver_linux64.zip "https://msedgedriver.azureedge.net/119.0.2151.72/edgedriver_win64.zip"
+          7z x edgedriver_win64.zip           
+          unzip -o edgedriver_win64.zip        
+          mv msedgedriver.exe ./node_modules/.bin/   
+          chmod +x ./node_modules/.bin/msedgedriver.exe
 
           # Install Nightwatch
           npm install nightwatch@latest
