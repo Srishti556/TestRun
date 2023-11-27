@@ -58,7 +58,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: './node_modules/.bin/msedgedriver_linux64.zip',
+        server_path: './node_modules/.bin/msedgedriver_linux64.exe',
         port: 9515,
         host: 'localhost',
         cli_args: [
@@ -78,7 +78,7 @@ module.exports = {
 
       webdriver: {
         start_process: true,
-        server_path: './node_modules/.bin/msedgedriver_linux64.zip',
+        server_path: './node_modules/.bin/msedgedriver_linux64.exe',
         port: 9515,
         host: 'localhost',
         logEntries: true,
