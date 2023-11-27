@@ -46,12 +46,10 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v3.7.3
       with: 
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ GITHUB_TOKEN }}
         publish_dir: './tests_output/nightwatch-html-report'
         keep_files: true
-        user_name: "gravityvi"
-        user_email: "ravisawlani04@gmail.com"
-
+      
     - name: Upload screenshots
       if: always()
       uses: actions/upload-artifact@v2.2.0
