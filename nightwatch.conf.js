@@ -32,10 +32,6 @@ module.exports = {
   // See https://nightwatchjs.org/guide/concepts/test-globals.html#external-test-globals
   globals_path : '',
 
-  webdriver: { 
-      logEntries: true,
-  },
-  
   test_workers: {
     enabled: true,
     workers: 'auto'
@@ -44,7 +40,7 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: 'https://localhost',
+      launch_url: '',
       screenshots: {
         enabled: false,
         path: 'screens',
@@ -59,8 +55,7 @@ module.exports = {
       webdriver: {
         start_process: true,
         server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
-        port: 9515,
-        host: 'localhost',
+        port: 9515
       }
     },
 
