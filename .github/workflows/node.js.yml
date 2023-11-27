@@ -27,7 +27,8 @@ jobs:
       run: |
           curl -L -o msedgedriver_linux64.zip "https://msedgedriver.azureedge.net/119.0.2151.72/edgedriver_linux64.zip"
           7z x msedgedriver_linux64.zip           
-          unzip -o msedgedriver_linux64.zip        
+          unzip -o msedgedriver_linux64.zip  
+          ls -l
           mv msedgedriver_linux64.exe ./node_modules/.bin/   
           chmod +x ./node_modules/.bin/msedgedriver_linux64.exe
     - name: Run Nightwatch tests
