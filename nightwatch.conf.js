@@ -64,19 +64,15 @@ module.exports = {
         server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
         port: 9515,
         host: 'localhost',
-        cli_args: [
-        ],
-        logEntries: true,
       }
     },
 
     edge: {
       desiredCapabilities : {
-        browserName : 'MicrosoftEdge',
-        'ms:edgeOptions' : {
-          w3c: true,
-          args: []
-        }
+        browserName : 'edge',
+        'ms:edgeOptions': {
+          args: ['--verbose']
+      }
       },
 
       webdriver: {
@@ -84,7 +80,6 @@ module.exports = {
         server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
         port: 9515,
         host: 'localhost',
-        logEntries: true,
       }
     },
 
