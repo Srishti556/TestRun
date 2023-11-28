@@ -59,7 +59,7 @@ module.exports = {
          default_path_prefix: '',
          proxy: undefined,
          cli_args: ['--verbose'],
-      
+         log_path: true
     }
   },
 
