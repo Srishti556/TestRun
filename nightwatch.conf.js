@@ -53,9 +53,14 @@ module.exports = {
       }
       },
       webdriver: {
-        start_process: true,
-        server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
-        port: 9515
+         start_process: true,
+         server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
+         port: undefined,
+         host: 'localhost',
+         ssl: false,
+         default_path_prefix: '',
+         proxy: undefined,
+         cli_args: {}
       }
     },
 
