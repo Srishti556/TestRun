@@ -52,7 +52,7 @@ module.exports = {
           args: ['--verbose']
       }
       },
-      webdriver: {
+      edgedriver: {
          start_process: true,
          server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
          port: undefined,
