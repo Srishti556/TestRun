@@ -32,14 +32,14 @@ jobs:
           7z x edgedriver_linux64.zip           
           unzip -o edgedriver_linux64.zip  
           ls -l
-          mv msedgedriver.exe ./node_modules/.bin/   
-          chmod +x ./node_modules/.bin/msedgedriver.exe
+          mv msedgedriver ./node_modules/.bin/   
+          chmod +x ./node_modules/.bin/msedgedriver
 
           # Install Nightwatch
           npm install nightwatch@latest
     - name: Run Nightwatch tests
       run: |  
-         ls -l ./node_modules/.bin/msedgedriver.exe
+         ls -l ./node_modules/.bin/msedgedriver
          echo $PWD
          npm test
     - name: "Publish test results"
