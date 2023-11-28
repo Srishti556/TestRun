@@ -52,15 +52,15 @@ module.exports = {
           args: ['--verbose']
       }
       },
-      edgedriver: {
+      webdriver: {
          start_process: true,
          server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
-         port: undefined,
+         port: 3450,
          host: 'localhost',
          ssl: false,
          default_path_prefix: '',
          proxy: undefined,
-         cli_args: {}
+         cli_args: ['--verbose'],
       }
     },
 
