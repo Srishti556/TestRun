@@ -40,7 +40,7 @@ module.exports = {
   test_settings: {
     default: {
       disable_error_log: false,
-      launch_url: '',
+      launch_url: '/',
       screenshots: {
         enabled: false,
         path: 'screens',
