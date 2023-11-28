@@ -1,20 +1,18 @@
-describe('duckduckgo example', function () {
-  it('Search Nightwatch.js and check results', function (browser) {
+module.exports = {
+  'Search Nightwatch on DuckDuckGo': function(browser) {
     browser
-      .navigateTo('https://duckduckgo.com')
-      .waitForElementVisible('#search_form_input_homepage')
-      .sendKeys('#search_form_input_homepage', ['Nightwatch.js'])
-      .click('#search_button_homepage')
-      .assert.visible('.results--main')
-      .assert.textContains('.results--main', 'Nightwatch.js')
+      .url('https://duckduckgo.com/')
+      .waitForElementVisible('body', 10000)
+      .assert.title('DuckDuckGo — Privacy, simplified.')
+      .assert.visible('input[name=q]')
 
-      // Retrieve and print logs
-      .getLog('msedgedriver', function (result) {
-        result.forEach(entry => {
-          console.log(entry.message);
-        });
-      })
+      .setValue('input[name=q]', 'nightwatchjs')
+      .pause(2000)
+      .click('button[type="submit"]')
+      .pause(2000)
+
+      .assert.containsText('.zcm__link', 'All')
 
       .end();
-  });
-});
+  }
+};
