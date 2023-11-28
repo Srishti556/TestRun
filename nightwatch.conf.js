@@ -52,7 +52,7 @@ module.exports = {
       },
       webdriver: {
          start_process: true,
-         server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver.exe',
+         server_path: '/home/runner/work/TestRun/TestRun/node_modules/.bin/msedgedriver',
          port: 3450,
          host: 'localhost',
          ssl: false,
