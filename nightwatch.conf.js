@@ -48,7 +48,8 @@ module.exports = {
         on_failure: true
       },
       desiredCapabilities: {
-        browserName: 'MicrosoftEdge',
+        alwaysMatch: { 'ms:edgeOptions': { args: ['--headless'] } },
+        browserName: 'MicrosoftEdge'
       },
       webdriver: {
          start_process: true,
