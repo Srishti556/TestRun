@@ -39,7 +39,6 @@ module.exports = {
 
   test_settings: {
     default: {
-      disable_error_log: false,
       launch_url: '/',
       screenshots: {
         enabled: false,
@@ -48,9 +47,6 @@ module.exports = {
       },
       desiredCapabilities: {
         browserName: 'MicrosoftEdge',
-       'ms:edgeOptions': {
-          args: ['--verbose']
-      }
       },
       webdriver: {
          start_process: true,
@@ -62,7 +58,8 @@ module.exports = {
          proxy: undefined,
          cli_args: ['--verbose'],
       }
-    },
+    }
+  },
 
 
   
